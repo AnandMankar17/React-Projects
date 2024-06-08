@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
@@ -10,12 +10,11 @@ fetch('https://dummyjson.com/products')
 .then(res=>res.json())
 .then(data=>{
   root.render(
-    <div>
+    <StrictMode>
       {data.products.map((product)=>{
         return <Card title={product.title} image={product.thumbnail} brand={product.brand} price={product.price}/>
       })}
-    </div>
-
+</StrictMode>
   )
 
 })
