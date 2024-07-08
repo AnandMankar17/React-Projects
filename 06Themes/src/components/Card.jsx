@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React from "react"
 
 export default function Card({ name, flag, population, region, capital }) {
   return (
